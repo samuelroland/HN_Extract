@@ -30,11 +30,11 @@ function displaySearchResult(response) {
 }
 
 function displayDetailsResult(response) {
-    listDetails.innerHTML = "Details of " + response.username + ":<br>About: " + response.about
+    listDetails.innerHTML = "<h3>About <strong>" + response.username + "</strong>:</h3> " + ((response.about == "") ? "Vide" : response.about)
 
 }
 
-function displayPostedStories(response){
+function displayPostedStories(response) {
     listPostedStories.innerHTML = ""
     Array.prototype.forEach.call(response.hits, function (story) {
         element = document.createElement("li")

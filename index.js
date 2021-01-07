@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", init)
 function init() {
     btnSearch.addEventListener("click", search)
     btnDetails.addEventListener("click", details)
+    btnStory.addEventListener("click", storyDetails)
 }
 
 function search() {
@@ -42,6 +43,16 @@ function displayPostedStories(response) {
         listPostedStories.appendChild(element)
     })
 }
+
+// CODE HERE FOR STORY DETAILS
+function storyDetails() {    //onclick on button
+    console.log("asd")
+}
+
+function dipslayStoryDetails(){
+
+}
+// STOP THE CODE
 
 //Send a HTTP request (with an Ajax call):
 function sendRequest(url, callback) {

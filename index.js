@@ -46,12 +46,20 @@ function displayPostedStories(response) {
 
 // CODE HERE FOR STORY DETAILS
 function storyDetails() {    //onclick on button
-    console.log("asd")
+    query = query = "http://hn.algolia.com/api/v1/items/" + inpStory.value.trim()
+    sendRequest(query, dipslayStoryDetails)
 }
 
-function dipslayStoryDetails(){
+function dipslayStoryDetails(response) {
+    if (response != null) {
+        code = "<h4>" + response.title + "</h4>"
+        code += "<p>Author: " + response.author + "</p>"
+        code += "<p><strong>Text</strong>: " + response.text + "</p>"
 
+        divBasicStory.innerHTML = code
+    }
 }
+
 // STOP THE CODE
 
 //Send a HTTP request (with an Ajax call):
